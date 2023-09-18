@@ -2,7 +2,9 @@ import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image'
 
-const navbar = () => {
+
+
+const Navbar = () => {
   return (
     // <header>
     // <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
@@ -47,14 +49,56 @@ const navbar = () => {
     //     </div>
     // </nav>
     // </header>
-    <header>
-        <nav className='flex py-6'>
-            <div className='lg:w-1/3 items-centere text-red-500'>hello</div>
-            <div className='lg:w-1/2 items-center'>hello</div>
-            <div className='lg:w-1/3 items-center'>hello</div>
+    <header className='bg-slate-400'>
+        <div className='container max-w-5xl mx-auto'>
+        <nav className='flex py-6 items-center'>
+            <div className='lg:w-1/6 md:w-1/4 flex justify-start'>
+                <div className='logo w-full'>
+                    <Image src="/logo.png" width={100} height={100} alt='website-logo'/>
+                </div>
+            </div>
+            <div className='lg:w-1/6 md:w-1/4 flex lg:justify-end md:justify-end lg:order-2'>
+            <ul className='flex flex-wrap justify-evenly w-full'>
+                    <li>
+                        <Link href="/"><i class="fa-brands fa-facebook-f"></i></Link>
+                    </li>
+                    <li>
+                        <Link href="/"></Link>
+                    </li>
+                    <li>
+                        <Link href="/"></Link>
+                    </li>
+                    <li>
+                        <Link href="/"></Link>
+                    </li>
+                    <li>
+                        <Link href="/"></Link>
+                    </li>
+                </ul>
+            </div>
+            <div className='lg:w-4/6 md:w-1/2 flex lg:justify-center md:justify-end lg:order-1'>
+                <ul className='flex flex-wrap justify-evenly w-full'>
+                    <li>
+                        <Link href="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link href="/about">About Us</Link>
+                    </li>
+                    <li>
+                        <Link href="/blogs">Featured Article</Link>
+                    </li>
+                    <li>
+                        <Link href="/">Podcast</Link>
+                    </li>
+                    <li>
+                        <Link href="/">News Letter</Link>
+                    </li>
+                </ul>
+            </div>
         </nav>
+        </div>
     </header>
   )
 }
 
-export default navbar
+export default Navbar
